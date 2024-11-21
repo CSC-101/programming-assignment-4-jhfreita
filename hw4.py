@@ -13,7 +13,7 @@ open(sample_file, "r")
 # If the line requests filtering by a certain attribute being greater or less than a number, a list of counties
 # meeting that requirement will be printed. If the line requests a certain percent or total population of all the counties
 # in a set of data, that will be returned. Lastly, if an error occurs due to a line, the user should be notified.
-# Error control is admittedly compromised, as I have been behind on my assignments lately. Sorry
+# Error control is admittedly compromised, as I have been behind on my assignments lately. Sorry.
 with open(sample_file, "r") as file:
         first_line = file.readline().strip()
         data = full_data
