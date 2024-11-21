@@ -6,6 +6,14 @@ from build_data import convert_county
 full_data = build_data.get_data()
 sample_file = input("Enter a file name: ")
 open(sample_file, "r")
+# The following function is designed to read each line in a file and do various things depending on
+# its contents. If the line requests the total population of some data, the population of the counties in
+# the data will be printed. If the line requests filter by state, the data will be filtered accordingly, and the counties
+# to be included in the filtered data will be displayed unless there are too many counties to be displayed.
+# If the line requests filtering by a certain attribute being greater or less than a number, a list of counties
+# meeting that requirement will be printed. If the line requests a certain percent or total population of all the counties
+# in a set of data, that will be returned. Lastly, if an error occurs due to a line, the user should be notified.
+# Error control is admittedly compromised, as I have been behind on my assignments lately. Sorry.
 with open(sample_file, "r") as file:
         first_line = file.readline().strip()
         data = full_data
